@@ -1,0 +1,17 @@
+dn: cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: custom
+
+# Atributo para control de cuota
+attributeType ( 1.3.6.1.4.1.4203.666.1.200
+    NAME 'quotaLimit'
+    DESC 'Cuota de navegación en MB'
+    EQUALITY integerMatch
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 )
+
+# Atributo para salida internacional
+attributeType ( 1.3.6.1.4.1.4203.666.1.201
+    NAME 'intlAccess'
+    DESC 'Permiso de salida internacional'
+    EQUALITY booleanMatch
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 )
